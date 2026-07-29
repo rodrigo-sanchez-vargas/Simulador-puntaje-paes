@@ -1,15 +1,34 @@
 import matplotlib.pyplot as plt
 
-print("""Ponderador puntaje PAES admisión 2027
-Carrera: Ingeniería Civil en Computación e Informática o afín.
-Opciones disponibles:
-            1. Ingeniería Civil de Computación - Pontificia Universidad Catolica de chile
-            2. Ingeniería Civil en Computación - Universidad de Chile
-            3. Ingeniería Civil en Informática - Universidad de Santiago de Chile
-            4. Ingeniería Civil Informática - Universidad Federico Santa Maria
-            5. Ingeniería Civil Informática - Universidad de Concepción
-            6. Ingeniería Civil en Informática y Telecomunicaciones - Universidad Diego Portales
-""")
+print("Ponderador puntaje PAES admisión 2027")
+universidades = [
+    {
+        "Carrera": "Ingeniería Civil de Computación",
+        "Universidad": "Pontificia Universidad Catolica de chile",
+    },
+    {
+        "Carrera": "Ingeniería Civil en Computación",
+        "Universidad": "Universidad de Chile",
+    },
+    {
+        "Carrera": "Ingeniería Civil en Informática",
+        "Universidad": "Universidad de Santiago de Chile",
+    },
+    {
+        "Carrera": "Ingeniería Civil Informática",
+        "Universidad": "Universidad Federico Santa Maria",
+    },
+    {
+        "Carrera": "Ingeniería Civil Informática",
+        "Universidad": "Universidad de Concepción",
+    },
+    {
+        "Carrera": "Ingeniería Civil en Informática y Telecomunicaciones",
+        "Universidad": "Universidad Diego Portales",
+    },
+]
+for numeracion, universidad in enumerate(universidades, start=1):
+    print(f"{numeracion}. {universidad['Universidad']} - {universidad['Carrera']}")
 
 while True:
     try:
